@@ -1,0 +1,1 @@
+"""External-facing services: project loader, ffmpeg bridge, model registry."""
