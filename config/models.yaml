@@ -1,0 +1,16 @@
+# Pinned model manifest. Checksums verified before load.
+base_url: https://models.song-to-visuals.dev/v0.4
+
+artifacts:
+  diffusion_sd15:
+    file: sd15-pruned.safetensors
+    sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+    size_bytes: 2130000000
+  vae_taesd:
+    file: taesd.safetensors
+    sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+    size_bytes: 4600000
+  whisperx_small:
+    file: whisperx-small.bin
+    sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+    size_bytes: 480000000
