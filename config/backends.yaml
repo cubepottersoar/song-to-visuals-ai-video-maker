@@ -1,0 +1,18 @@
+# Visual backend registry. `auto` picks the first available in order.
+order: [cuda, directml, cpu]
+
+backends:
+  cuda:
+    module: song_to_visuals.core.backends.torch_diffusion
+    class: TorchDiffusionBackend
+    device: cuda
+    fp16: true
+  directml:
+    module: song_to_visuals.core.backends.directml_diffusion
+    class: DirectMLDiffusionBackend
+    device: privateuseone:0
+  cpu:
+    module: song_to_visuals.core.backends.onnx_diffusion
+    class: OnnxDiffusionBackend
+    device: cpu
+    threads: 8
