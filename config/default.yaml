@@ -1,0 +1,38 @@
+# Default pipeline config for song-to-visuals-ai-video-maker
+project:
+  name: untitled
+  fps: 24
+  resolution: [1280, 720]
+  duration_mode: full   # full | clip
+  clip_seconds: 30
+
+audio:
+  sample_rate: 22050
+  hop_length: 512
+  beat_sensitivity: 0.65
+  min_bpm: 60
+  max_bpm: 200
+
+lyrics:
+  enabled: true
+  language: en
+  aligner: whisperx        # whisperx | none
+  min_segment_ms: 400
+
+style:
+  preset: neon-noir
+  strength: 0.72
+  seed: 6767
+  negative_prompt: "text, watermark, logo, lowres"
+
+render:
+  backend: auto            # auto | cuda | directml | cpu
+  batch_size: 4
+  motion_amount: 0.35
+  transition: beat-cut     # beat-cut | crossfade | hard
+  codec: libx264
+  bitrate: 12M
+
+output:
+  dir: ./renders
+  keep_frames: false
